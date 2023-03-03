@@ -6,6 +6,27 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Lens",
   description: "Search on Reddit with ease.",
+  openGraph: {
+    type: "website",
+    title: "Lens",
+    description: "Search on Reddit with ease.",
+    siteName: "Lens",
+    url: "https://lens.valencassa.dev",
+    images: [
+      {
+        url: "https://i.imgur.com/H55Isz9.png",
+        width: 1920,
+        height: 960,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lens",
+    description: "Search on Reddit with ease.",
+    creator: "@devcassa",
+    images: ["https://i.imgur.com/H55Isz9.png"],
+  },
 };
 
 const satoshiFont = localFont({
