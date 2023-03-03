@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* placeholder text style */
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #4b5563;
+  opacity: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+/* regular text style */
+input[type="date"][data-value="true"]::-webkit-datetime-edit-text,
+input[type="date"][data-value="true"]::-webkit-datetime-edit-month-field,
+input[type="date"][data-value="true"]::-webkit-datetime-edit-day-field,
+input[type="date"][data-value="true"]::-webkit-datetime-edit-year-field {
+  color: black !important;
+  opacity: 100% !important;
+}
