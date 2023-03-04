@@ -20,16 +20,9 @@ interface Queries extends Record<keyof typeof initialValues, string> {
 }
 
 export async function GET(request: Request) {
-  const reqQueries = request.url
-    .split("?")[1]
-    .split("&")
-    .reduce((acc: any, cur) => {
-      const [key, value] = cur.split("=");
-      acc[key] = value;
-      return acc;
-    }, {}) as Queries;
-
-  console.log(reqQueries);
+  const reqQueries = Object.fromEntries(
+    new URL(request.url).searchParams.entries()
+  );
 
   const parsedQueries = Object.entries(reqQueries).reduce(
     (acc: any, [initialKey, value]) => {
