@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { LinkedIn, Svg3DSelectFace, Twitter } from "iconoir-react";
+import { GitHub, LinkedIn, Svg3DSelectFace, Twitter } from "iconoir-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -58,6 +58,11 @@ const Ad = () => {
       <Tooltip label="Go see my portfolio">
         <Link href={"https://valencassa.dev"} target="_blank">
           <Svg3DSelectFace width={22} />
+        </Link>
+      </Tooltip>
+      <Tooltip label="Repository">
+        <Link href={"https://github.com/ValenCassa/lens"} target="_blank">
+          <GitHub width={22} />
         </Link>
       </Tooltip>
     </div>
